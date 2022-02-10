@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,700&family=The+Nautigal:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap');
+
+
+:root{
+    --border:.1rem solid rgba(255,255,255,.3);
+    --favorite-color: #2125c5;
+    --primary-color: #3db291;
+    --background-color: #f2f2ed;
+    --secon-color: #060708;
+    --grey: #437186;
+    --white: #ffffff;
+    --baby: #cacfe4;
+    --foam: #0c3f31;
+    --body-font: 'Poppins', sans-serif;
+    --point-color: #555;
+    --size: 5px;
+}
+
+*{
+    font-family: var(--body-font);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #2125c5;
+}
+
+body{
+    background: var(--background-color);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.title{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.title h2{
+    font-weight: 300;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 32px;
+}
+.title h2 span{
+    font-weight: 600;
+}
+.title h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--secon-color);
+    font-weight: 400;
+    position: relative;
+    margin: 24px 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.title h3::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background: var(--favorite-color);
+    width: 80px;
+}
+
+
+
+.heading{
+    text-align: center;
+    color: var(--secon-color);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: var(--background-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--secon-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+
+
+
+
+
+/*======================HEADER END==================
+
+NAVABAR CSS
+
+/*======================HOME STARTS==================*/
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgba(33,37,197,1) 25%, rgba(33,37,197,0) 62%), url(./images/purposelyeveolvinghomebackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .home-content{
+    max-width: 40rem;
+    margin-top: 12rem;
+}
+
+.home .home-content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    line-height: 5rem;
+    text-shadow: 4px 2px #060708;
+}
+
+.home .home-content p{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 1rem 0;
+    color: var(--background-color);  
+}
+
+.second{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #cacfe4;
+    background-color: var(--secon-color);
+    cursor: pointer;
+}
+
+.second:hover{
+    letter-spacing: .2rem;
+}
+
+/*======================HOME END==================*/
+
+
+/*======================ABOUT STARTS==================*/
+
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 3rem;
+    background: #eee;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+  
+}
+
+.about .about-image{
+    flex: 1 1 .2rem;
+    padding-left: 3rem;
+}
+
+.about .about-image img{
+    width: 45rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.about .about-content{
+    flex: 1 1 10rem;
+    text-align: center;
+    max-width: 70rem;
+    font-weight: 400;
+}
+
+.about .about-content span{
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    color: var(--primary-color);
+    
+}
+
+.about .about-content .about-title{
+    font-size: 1.7rem;
+    padding-top: 0.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--favorite-color);
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+.about .about-content p{
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--secon-color);
+}
+
+.about-small-text {
+    margin-bottom: -3rem;
+    color: #ddc643 !important;
+    font-weight: 500;
+}
+
+.about-small-text span{
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.about .about-content .about-icons-container{
+    margin-top: 2rem;
+    
+    align-content: center;
+}
+
+.about .about-content .about-icons-container .about-icons img{
+    width: 100%;
+    
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1.8);
+}
+
+/*======================ABOUT ENDS==================*/
+
+
+/*======================WEIGHT LOSS STARTS==================*/
+
+
+
+
+/*======================WEIGHT LOSS END==================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================MEDIA QUERIES     max 991px ==================*/
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+/*======================MEDIA QUERIES     max 768px ==================*/
+
+@media (max-width:768px){
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--background-color);
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        color:var(--favorite-color);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .home-content h3{
+        font-size: 4.5rem;
+        font-weight: bold;
+        
+    }
+
+    .home .home-content p{
+        font-size: 1.7rem;
+    }
+
+    
+}
+
+/*======================MEDIA QUERIES     max 450px ==================*/
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+
+}

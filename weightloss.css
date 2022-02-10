@@ -1,0 +1,582 @@
+
+:root{
+    --border:.1rem solid rgba(255,255,255,.3);
+    --favorite-color: #2125c5;
+    --primary-color: #3db291;
+    --background-color: #f2f2ed;
+    --secon-color: #060708;
+    --grey: #437186;
+    --white: #ffffff;
+    --baby: #cacfe4;
+    --foam: #0c3f31;
+    --body-font: 'Poppins', sans-serif;
+    --point-color: #555;
+    --size: 5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.top-title{
+    margin-top: 7.5rem;
+}
+
+
+/*======================WEIGHT LOSS SYMPTOMS SECTION STARTS==================*/
+
+.symptoms-home{
+    max-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient(transparent,rgba(0,0,0,.9)), url(./images/group-runners-training-park-rear-view-back-camera-happy-smiling.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.symptoms-home .symptoms-content{
+    width: 60rem;
+    padding: 4rem 0;
+    padding-bottom: 15rem;
+}
+
+.symptoms-home .symptoms-content h3{
+    color: var(--background-color);
+    font-size: 6.5rem;
+}
+
+.symptoms-home .symptoms-content p{
+    color: #aaa;
+}
+
+.symptoms-icons-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -10rem;
+}
+
+.symptoms-icons-container .symptoms-icons{
+    width: 20rem;
+    margin: 1rem;
+    padding: 2rem 1rem;
+    border-radius: .2rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.8);
+    text-align: center;
+    background: var(--white);
+}
+
+.symptoms-icons-container .symptoms-icons:hover{
+    transform: translateY(-2rem);
+}
+
+.symptoms-icons-container .symptoms-icons img{
+    height: 15rem;
+    width: 17rem;
+}
+
+.symptoms-icons-container .symptoms-icons h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--favorite-color);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.symptoms-icons-container .symptoms-icons ul{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+    list-style: none;
+    line-height: 1;
+    
+}
+
+.symptoms-icons-container .symptoms-icons ul li{
+    margin-left: 2rem;
+}
+
+/*======================WEIGHT LOSS SYMPTOMS SECTION END==================*/
+
+
+
+/*======================WEIGHT LOSS SLIDE STARTS==================*/
+.weightloss-slide{
+    min-height: 40vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-bottom: 3rem;
+    background-image: linear-gradient(to right top, #2125c5, #0063e3, #0085d1, #009eac, #3db291);
+    position: relative;
+    perspective: 1000px;
+    border-top-right-radius: 35rem;
+}
+
+
+.weightloss-slide .slide-container .slide{
+    border-radius: .4rem;
+    background: #161616;
+    box-shadow: 0 .4rem .8rem #eee;
+    width: 450px;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: slide .4s linear;
+}
+
+@keyframes slide{
+    0%{
+        transform: rotateX(180deg);
+    }
+}
+
+.weightloss-slide .slide-container .slide > *{
+    animation: slideContent .2s linear .4s backwards;
+}
+
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+}
+.weightloss-slide .slide-container .slide .user{
+    display: flex;
+    align-items: center;
+}
+
+.weightloss-slide .slide-container .slide img{
+    height: 100px;
+    width: 100px;
+    border-radius: 2%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.weightloss-slide .slide-container .slide .user .slide-info h3{
+    color: var(--white);
+    background-color: #2124c5a2;
+    padding: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.weightloss-slide .slide-container .slide .user .slide-info .emoji i{
+    color:#3db291;
+    font-size: 15px;
+}
+
+.weightloss-slide .slide-container .slide .text{
+    color: var(--background-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
+.weightloss-slide .slide-container{
+    display: none;
+}
+
+.weightloss-slide .slide-container.active{
+    display: block;
+}
+
+.weightloss-slide #next,
+.weightloss-slide #prev{
+    position: absolute;
+    top: 290px;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background: #060606;
+    color: var(--background-color);
+    cursor: pointer;
+    border-radius: 5%;
+    box-shadow: 0 0px 5px #09c5bb;
+}
+
+.weightloss-slide #next{
+    right: 30vw;
+}
+
+.weightloss-slide #prev{
+    left: 30vw;
+}
+
+.weightloss-slide #next:hover,
+.weightloss-slide #prev:hover{
+    color: #09c5bb;
+}
+
+
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/*======================WEIGHT LOSS SLIDE END==================*/
+
+
+
+
+.medicine{
+    background: url(./images/geometric.jpg);
+    /*min-height: 20vh;*/
+    background-position: center;
+}
+
+.medicine .medicine-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.medicine .medicine-row .medicine-image{
+    max-height: 35rem;
+    text-align: center;
+    flex: 1 1 40rem;
+}
+
+.medicine .medicine-row .medicine-image img{
+    width: 100%;
+    margin-left: 4rem;
+   
+}
+
+.medicine .medicine-row .medicine-content{
+    flex: 1 1 40rem;
+    padding: 3rem;
+}
+
+.medicine .medicine-row .medicine-content .medicine-heading{
+    color: var(--favorite-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.medicine .medicine-row .medicine-content p{
+    font-size: 1.7rem;
+    text-transform: none;
+    color: var(--secon-color);
+    padding: 1rem 0;
+}
+
+.medicine .medicine-row .medicine-content ul li{
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    color: #333;
+    padding: .5rem 0;
+    list-style:square;
+}
+
+.medicine .medicine-row .medicine-content .btn{
+    margin-top: 2rem;
+}
+
+.medicine .medicine-row .medicine-content .btn-right{
+    margin-left: 7rem;
+}
+
+.medicine .medicine-row .medicine-content .btn-end{
+   margin-left: 4rem;
+   background-image: linear-gradient(to right top, #2125c5, #0063e3, #0085d1, #009eac, #3db291);
+}
+
+
+/*==========================================PRICING STARTS=====================================*/
+
+.pricing-faq{
+    height: 100%;
+    display:flex;
+    background-image: url(./images/geometric.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pricing-faq .pricing-faq-left{
+    flex-basis: 50%;
+}
+
+.pricing-faq .pricing-faq-right{
+    flex-basis: 50%;
+}
+
+.pricing-faq .pricing-faq-left{
+   background: url(./images/backgroundpattern.png);
+   background-position: center;
+   background-size: cover;
+   
+}
+
+.pricing-faq .pricing-faq-right{
+    padding: 5%;
+}
+
+.pricing-faq .pricing-heading{
+    margin-bottom: 4rem;
+}
+
+.pricing-faq .pricing-heading h4{
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right top, #2125c5, #0063e3, #0085d1, #009eac, #3db291);
+    color: var(--background-color);
+    padding: 1rem 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400
+}
+
+.pricing-faq .pricing-heading h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+/*==accordion==*/
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion-box{
+    max-width: 700px
+}
+
+.accordion-box .main-tab{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
+    margin-bottom: 10px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 40px;
+}
+
+.accordion-box .main-tab label{
+    cursor: pointer;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    
+    z-index: 99;
+}
+
+.accordion-box .main-tab label span{
+    color: var(--secon-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.accordion-box .main-tab input:checked ~ label span{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    /*transition: all 0.3s ease;*/
+}
+
+.accordion-box .main-tab label .pricing-icon{
+    font-size: 1.5rem;
+    color: var(--favorite-color) !important;
+    position: relative;
+}
+
+.accordion-box .main-tab input:checked ~ label .pricing-icon i::before{
+    content: '\f150';
+    display: inline-block;
+   
+    color:#ddc643;
+}
+
+.accordion-box .main-tab .pricing-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+
+.accordion-box .main-tab input:checked ~ .pricing-content{
+    max-height: 100vh;
+}
+
+.accordion-box .main-tab .pricing-content p{
+    padding: 10px 25px 25px 75px;
+    font-size: 1.3rem;
+    color: var(--white);
+    background-color: var(--favorite-color);
+
+}
+
+.accordion-box .main-tab .pricing-content li{
+    padding: 10px 105px;
+    font-size: 1.5rem;
+    color: var(--secon-color);
+    background-color: var(--white);
+    line-height: 1;
+    
+}
+
+
+/*==========================================PRICING ENDS=====================================*/
+/*======================MEDIA QUERIES     max 768px ==================*/
+
+@media (max-width:768px){
+    .weightloss-slide .slide-container .slide{
+        width: 350px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .symptoms-home{
+        background:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(./images/group-runners-training-park-rear-view-back-camera-happy-smiling.jpg) no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+
+    .symptoms-home .symptoms-content{
+        text-align: center;
+        width: auto;
+    }
+
+    .symptoms-home .symptoms-content h3{
+        font-size: 4rem;
+    }
+
+    .medicine .medicine-row .medicine-content .btn-right{
+        margin-left: 0;
+    }
+
+    .medicine .medicine-row .medicine-content .btn-end{
+        margin-left: 0;
+    }
+}

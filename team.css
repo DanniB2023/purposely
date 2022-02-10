@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,700&family=The+Nautigal:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #3db291;
+    --background-color: rgb(242, 242, 237);
+    --secon-color: rgb(6, 7, 8);
+    --grey: rgb(67, 113, 134);
+    --white: #ffffff;
+    --baby: #cacfe4;
+    --foam: #0c3f31;
+    --body-font: 'Poppins', sans-serif;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0; 
+    box-sizing: border-box;
+    
+    outline: none; border:none;
+    text-decoration: none;
+  }
+section{
+    padding: 3.5rem 0 !important;
+}
+
+/*==========BACKGROUND STARTS=============*/
+
+span.s1 {
+    position: absolute;
+    top: -3rem;
+    font-size: 10rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: transparent;
+    margin-left: 2rem; 
+    color: #d9def19c;
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+    letter-spacing: -.8rem;
+}
+
+  
+span.s2 {
+    font-weight: 800;
+    position: absolute;
+    bottom: -6.2rem;   
+    right: 0;
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: transparent;
+    margin-right: 12rem;
+    color: #d9def19c;
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+      letter-spacing: -.8rem;
+ }
+
+/*==========BACKGROUND ENDS=============*/
+
+.team-company{
+    background-image: url(./images/geometric.jpg);
+    position: relative;
+   
+}
+
+.title{
+    margin-top: 10rem;
+}
+
+.team-container{
+    background: linear-gradient(#eee 70%, #3b79d2 30.1%);
+    background-position: center;
+    min-height: 23vh;
+    text-align: center;
+    margin: 4rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: normal;
+    align-content: normal;
+    
+    position: relative;
+}
+
+
+
+
+.team-container .team-box-container .team-box{
+    
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    flex: 0 0 auto;
+    margin: 10px;
+}
+
+.team-container .team-box-container .team-box:nth-child(1){
+    display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.team-container .team-box-container .team-box:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+
+
+.team-container .team-box-container .team-box h3{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #f2f2ed;
+    font-weight: 400;
+    background-image: linear-gradient(to right top, #2125c5, #0063e3, #0085d1, #009eac, #3db291);
+}
+
+.team-container .team-box-container .team-box img{
+    width: 100%;
+}
+
+
+/*========================BIO STORY START=========================*/
+.team-bio-profile{
+    position: relative;
+   
+}
+
+.team-bio-profile .team-bio-content{
+   
+    margin: auto;
+    text-align: justify;
+    background: url(./images/geometric.jpg);
+    background-position: center;
+    background-size: center;
+    padding: 8rem;
+   
+    color: #060606;
+}
+
+
+.team-bio-profile .team-bio-content .img-pro{
+    border-radius: 50%;
+    float: left;
+    shape-outside: border-box;
+    margin: .4rem;
+    padding: 2rem;
+    height: 20rem;
+    margin-top: -4.5rem;
+}
+
+.team-bio-profile .team-bio-content .team-story{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -2rem;
+}
+
+.team-bio-profile .team-bio-content  .team-story span{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #000;
+    text-shadow: 1px 1px 2px #3b79d2;
+}
+
+.team-bio-profile .team-bio-content p{
+    font-size: 1.5rem;
+    font-weight: 400;
+ 
+}
+
+.team-bio-profile .team-bio-content  .team-story a{
+    background-color: #ddc643;
+    font-style: italic;
+    color: #060708;
+    text-decoration: underline;
+}
+
+/*========================BIO STORY END=========================*/
+
+@media (max-width:500px){
+    span.s1 {
+        top: 1rem;
+        font-size: 5.25rem;
+        margin-left: 1rem;
+        letter-spacing: -.3rem; 
+    }
+
+    .team-container{
+        min-height: 20vh;
+    }
+
+    span.s2 {
+         bottom: -1.5rem;
+        font-size: 5.25rem;
+        margin-right: .7rem;
+        letter-spacing: -.3rem;
+     }
+
+     .team-container .team-box-container .team-box h3{
+        font-size: 1.7rem;
+        padding: .5rem 0;
+    }
+
+    .team-bio-profile .team-bio-content{
+        padding: 2rem;
+    }
+
+    .team-bio-profile .team-bio-content .img-pro{
+        margin: .4rem;
+        padding: 1rem;
+        height: 12rem;
+        margin-top: 4rem;
+    }
+
+    .team-bio-profile .team-bio-content .team-story{
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+}
