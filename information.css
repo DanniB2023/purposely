@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,700&family=The+Nautigal:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap');
+
+
+:root{
+    --border:.1rem solid rgba(255,255,255,.3);
+    --favorite-color: #2125c5;
+    --primary-color: #3db291;
+    --background-color: #f2f2ed;
+    --secon-color: #060708;
+    --grey: #437186;
+    --white: #ffffff;
+    --baby: #cacfe4;
+    --foam: #0c3f31;
+    --body-font: 'Poppins', sans-serif;
+    --point-color: #555;
+    --size: 5px;
+}
+
+/*==========================================HOW IT WORKS STARTS========================================*/
+
+.how-it-works{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 7%;
+    background: #eee;
+    min-height: 100vh;
+    gap: 15px;
+    margin-top: -2rem;
+}
+
+.how-it-works .how-content{
+    flex: 1 1 400px;
+    margin-top: -5rem;
+}
+
+.how-it-works .how-image{
+    flex: 1 1 400px;
+}
+
+.how-it-works .how-image img{
+    width: 100%;
+}
+
+.how-it-works .how-content .title{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--favorite-color);
+}
+
+.how-it-works .how-content p{
+    color: rgb(61, 61, 61);
+    padding: 3px 0;
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.how-it-works .how-content p span{
+    color: var(--secon-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.how-it-works .how-content .steps{
+    display: flex;
+    gap: 2.3rem;
+    padding: .7rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.how-it-works .how-content .steps .step-box{
+    padding: 1rem;
+    background-image: linear-gradient(to right top, #2125c5, #0063e3, #0085d1, #009eac, #3db291);
+    border: .2rem solid #3333;
+    flex: 1 1 20px;
+    text-align: center;
+}
+
+.how-it-works .how-content .steps .step-box h3{
+    font-size: 2rem;
+    color: var(--secon-color);
+}
+
+.how-it-works .how-content .steps .step-box h4 {
+    font-size: 1rem;
+    margin-top: -.9rem;
+    font-weight: 400;
+}
+
+.how-it-works .how-content .steps .step-box span{
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 4rem 0;
+}
+
+/*==========================================HOW IT WORKS END========================================*/
+
+
+
+/*======================MEDIA QUERIES     max 768px ==================*/
+
+@media (max-width:768px){
+    .how-it-works .how-content{
+        margin-top: 0;
+    }
+}
